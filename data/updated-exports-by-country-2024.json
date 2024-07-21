@@ -1,0 +1,1964 @@
+[
+    {
+        "country": "India",
+        "exportsByCountry_exports": 496486.36,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0219,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "China",
+        "exportsByCountry_exports": 2723250.43,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.1078,
+        "exportsByCountry_mainExport2019": "Broadcasting Equipment",
+        "group": "Manufactured",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "United States",
+        "exportsByCountry_exports": 2123410,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.1026,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "North America"
+    },
+    {
+        "country": "Indonesia",
+        "exportsByCountry_exports": 181713.75,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0089,
+        "exportsByCountry_mainExport2019": "Coal Briquettes",
+        "group": "Energy",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Pakistan",
+        "exportsByCountry_exports": 26343.96,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0011,
+        "exportsByCountry_mainExport2019": "House Linens",
+        "group": "Manufactured",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Nigeria",
+        "exportsByCountry_exports": 38169.51,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0025,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Brazil",
+        "exportsByCountry_exports": 243738.85,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0114,
+        "exportsByCountry_mainExport2019": "Soybeans",
+        "group": "Crops and Livestock",
+        "region": "South America"
+    },
+    {
+        "country": "Bangladesh",
+        "exportsByCountry_exports": 38733.76,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0016,
+        "exportsByCountry_mainExport2019": "Non-Knit Men's Suits",
+        "group": "Manufactured",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Russia",
+        "exportsByCountry_exports": 378635.85,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0207,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Ethiopia",
+        "exportsByCountry_exports": 7631.64,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Coffee",
+        "group": "Food and Beverages",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Mexico",
+        "exportsByCountry_exports": 431431.72,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0195,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Central America"
+    },
+    {
+        "country": "Japan",
+        "exportsByCountry_exports": 785365.75,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0373,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "Philippines",
+        "exportsByCountry_exports": 91052.32,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0043,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Egypt",
+        "exportsByCountry_exports": 47875.74,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0019,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "DR Congo",
+        "exportsByCountry_exports": 13935.29,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0007,
+        "exportsByCountry_mainExport2019": "Refined Copper",
+        "group": "Minerals and Metals",
+        "region": "Unknown"
+    },
+    {
+        "country": "Vietnam",
+        "exportsByCountry_exports": 286206.89,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0105,
+        "exportsByCountry_mainExport2019": "Broadcasting Equipment",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Iran",
+        "exportsByCountry_exports": 46323.03,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.004,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Turkey",
+        "exportsByCountry_exports": 206374.01,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0099,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Middle East"
+    },
+    {
+        "country": "Germany",
+        "exportsByCountry_exports": 1669993.51,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0762,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Thailand",
+        "exportsByCountry_exports": 258155.16,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0133,
+        "exportsByCountry_mainExport2019": "Office Machine Parts",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Tanzania",
+        "exportsByCountry_exports": 8921.77,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "United Kingdom",
+        "exportsByCountry_exports": 770478.62,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0358,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "British Isles"
+    },
+    {
+        "country": "France",
+        "exportsByCountry_exports": 733165.4,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0359,
+        "exportsByCountry_mainExport2019": "Planes, Helicopters, and/or Spacecraft",
+        "group": "Manufactured",
+        "region": "Western Europe"
+    },
+    {
+        "country": "South Africa",
+        "exportsByCountry_exports": 93179.15,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0045,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Southern Africa"
+    },
+    {
+        "country": "Italy",
+        "exportsByCountry_exports": 555043.2,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0266,
+        "exportsByCountry_mainExport2019": "Packaged Medicaments",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Kenya",
+        "exportsByCountry_exports": 9776.1,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0005,
+        "exportsByCountry_mainExport2019": "Tea",
+        "group": "Crops and Livestock",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Myanmar",
+        "exportsByCountry_exports": 22615.14,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0008,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Colombia",
+        "exportsByCountry_exports": 36702.12,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0022,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "South America"
+    },
+    {
+        "country": "South Korea",
+        "exportsByCountry_exports": 596945.2,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0292,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "Uganda",
+        "exportsByCountry_exports": 5796.02,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Sudan",
+        "exportsByCountry_exports": 92.94,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "Spain",
+        "exportsByCountry_exports": 392402.62,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0203,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Iraq",
+        "exportsByCountry_exports": 88902.9,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0038,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Algeria",
+        "exportsByCountry_exports": 26103.36,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0018,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "Argentina",
+        "exportsByCountry_exports": 64589.96,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0031,
+        "exportsByCountry_mainExport2019": "Soybean Meal",
+        "group": "Crops and Livestock",
+        "region": "South America"
+    },
+    {
+        "country": "Afghanistan",
+        "exportsByCountry_exports": 357.78,
+        "exportsByCountry_dataYear": 1978,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Poland",
+        "exportsByCountry_exports": 335209.38,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Vehicle Parts",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Canada",
+        "exportsByCountry_exports": 476044.98,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0226,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "North America"
+    },
+    {
+        "country": "Morocco",
+        "exportsByCountry_exports": 40069.71,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0019,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "Ukraine",
+        "exportsByCountry_exports": 60740.02,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0024,
+        "exportsByCountry_mainExport2019": "Corn",
+        "group": "Crops and Livestock",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Angola",
+        "exportsByCountry_exports": 22059.21,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0017,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Saudi Arabia",
+        "exportsByCountry_exports": 184429.49,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0128,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Uzbekistan",
+        "exportsByCountry_exports": 14547.17,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0006,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Yemen",
+        "exportsByCountry_exports": 1308.59,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Mozambique",
+        "exportsByCountry_exports": 6271.23,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Coal Briquettes",
+        "group": "Energy",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Ghana",
+        "exportsByCountry_exports": 22081.41,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0009,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Peru",
+        "exportsByCountry_exports": 45118.89,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0023,
+        "exportsByCountry_mainExport2019": "Copper Ore",
+        "group": "Minerals and Metals",
+        "region": "South America"
+    },
+    {
+        "country": "Malaysia",
+        "exportsByCountry_exports": 207035.09,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.01,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Nepal",
+        "exportsByCountry_exports": 2275.26,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Palm Oil",
+        "group": "Crops and Livestock",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Madagascar",
+        "exportsByCountry_exports": 2628.83,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Vanilla",
+        "group": "Crops and Livestock",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Ivory Coast",
+        "exportsByCountry_exports": 13221.57,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0005,
+        "exportsByCountry_mainExport2019": "Cocoa Beans",
+        "group": "Crops and Livestock",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Venezuela",
+        "exportsByCountry_exports": 80524.23,
+        "exportsByCountry_dataYear": 2014,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "South America"
+    },
+    {
+        "country": "Cameroon",
+        "exportsByCountry_exports": 6134.98,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Niger",
+        "exportsByCountry_exports": 1413.66,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Australia",
+        "exportsByCountry_exports": 318466.28,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0127,
+        "exportsByCountry_mainExport2019": "Iron Ore",
+        "group": "Minerals and Metals",
+        "region": "Australia and New Zealand"
+    },
+    {
+        "country": "North Korea",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Watch Movements",
+        "group": "Manufactured",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "Syria",
+        "exportsByCountry_exports": 2891.4,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Pure Olive Oil",
+        "group": "Crops and Livestock",
+        "region": "Middle East"
+    },
+    {
+        "country": "Mali",
+        "exportsByCountry_exports": 5106.78,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Taiwan",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Unknown"
+    },
+    {
+        "country": "Burkina Faso",
+        "exportsByCountry_exports": 4467.78,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Sri Lanka",
+        "exportsByCountry_exports": 13379.07,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0008,
+        "exportsByCountry_mainExport2019": "Tea",
+        "group": "Crops and Livestock",
+        "region": "Southern Asia"
+    },
+    {
+        "country": "Malawi",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Raw Tobacco",
+        "group": "Crops and Livestock",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Zambia",
+        "exportsByCountry_exports": 8473.99,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Raw Copper",
+        "group": "Minerals and Metals",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Kazakhstan",
+        "exportsByCountry_exports": 51711.34,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0027,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Chile",
+        "exportsByCountry_exports": 79789.6,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0034,
+        "exportsByCountry_mainExport2019": "Copper Ore",
+        "group": "Minerals and Metals",
+        "region": "South America"
+    },
+    {
+        "country": "Romania",
+        "exportsByCountry_exports": 92665.46,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0041,
+        "exportsByCountry_mainExport2019": "Vehicle Parts",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Chad",
+        "exportsByCountry_exports": 2862.74,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Somalia",
+        "exportsByCountry_exports": 825.36,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Ecuador",
+        "exportsByCountry_exports": 22263.99,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.001,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "South America"
+    },
+    {
+        "country": "Guatemala",
+        "exportsByCountry_exports": 13111.55,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0005,
+        "exportsByCountry_mainExport2019": "Bananas",
+        "group": "Crops and Livestock",
+        "region": "Central America"
+    },
+    {
+        "country": "Senegal",
+        "exportsByCountry_exports": 5076.61,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Netherlands",
+        "exportsByCountry_exports": 711504.8,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0314,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Cambodia",
+        "exportsByCountry_exports": 15793.23,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0006,
+        "exportsByCountry_mainExport2019": "Knit Sweaters",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Zimbabwe",
+        "exportsByCountry_exports": 6715.44,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Guinea",
+        "exportsByCountry_exports": 8333.02,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Rwanda",
+        "exportsByCountry_exports": 1966.59,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Benin",
+        "exportsByCountry_exports": 3110.35,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Raw Cotton",
+        "group": "Crops and Livestock",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Burundi",
+        "exportsByCountry_exports": 141.64,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Bolivia",
+        "exportsByCountry_exports": 7448.74,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "South America"
+    },
+    {
+        "country": "Tunisia",
+        "exportsByCountry_exports": 19445.36,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": 0.0008,
+        "exportsByCountry_mainExport2019": "Insulated Wire",
+        "group": "Manufactured",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "Haiti",
+        "exportsByCountry_exports": 1110.02,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Knit T-shirts",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Belgium",
+        "exportsByCountry_exports": 417560.86,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0183,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Dominican Republic",
+        "exportsByCountry_exports": 14425.19,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0008,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Jordan",
+        "exportsByCountry_exports": 10365.21,
+        "exportsByCountry_dataYear": 5050,
+        "exportsByCountry_percGlobalExports2018": 0.0006,
+        "exportsByCountry_mainExport2019": "Potassic Fertilizers",
+        "group": "Minerals and Metals",
+        "region": "Middle East"
+    },
+    {
+        "country": "South Sudan",
+        "exportsByCountry_exports": 4397.36,
+        "exportsByCountry_dataYear": 2015,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Cuba",
+        "exportsByCountry_exports": 8769,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Rolled Tobacco",
+        "group": "Crops and Livestock",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Honduras",
+        "exportsByCountry_exports": 8335.95,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Knit Sweaters",
+        "group": "Manufactured",
+        "region": "Central America"
+    },
+    {
+        "country": "Sweden",
+        "exportsByCountry_exports": 241149.67,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0103,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Papua New Guinea",
+        "exportsByCountry_exports": 2834,
+        "exportsByCountry_dataYear": 2004,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Melanesia"
+    },
+    {
+        "country": "Czech Republic",
+        "exportsByCountry_exports": 174167.79,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0078,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Azerbaijan",
+        "exportsByCountry_exports": 15208.76,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.001,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Tajikistan",
+        "exportsByCountry_exports": 1397.05,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Greece",
+        "exportsByCountry_exports": 60397.05,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0034,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Portugal",
+        "exportsByCountry_exports": 84633.15,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0043,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Hungary",
+        "exportsByCountry_exports": 123836.56,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0055,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "United Arab Emirates",
+        "exportsByCountry_exports": 404046.29,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0159,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Belarus",
+        "exportsByCountry_exports": 37300.17,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Israel",
+        "exportsByCountry_exports": 114116.99,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0045,
+        "exportsByCountry_mainExport2019": "Diamonds",
+        "group": "Luxury Items",
+        "region": "Middle East"
+    },
+    {
+        "country": "Togo",
+        "exportsByCountry_exports": 1653.51,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Sierra Leone",
+        "exportsByCountry_exports": 613.19,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Titanium Ore",
+        "group": "Minerals and Metals",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Austria",
+        "exportsByCountry_exports": 222846.53,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0103,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Switzerland",
+        "exportsByCountry_exports": 468966.62,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0198,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Laos",
+        "exportsByCountry_exports": 5284.45,
+        "exportsByCountry_dataYear": 2016,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Electricity",
+        "group": "Energy",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Hong Kong",
+        "exportsByCountry_exports": 612566.52,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0277,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "Nicaragua",
+        "exportsByCountry_exports": 5341.78,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Knit T-shirts",
+        "group": "Manufactured",
+        "region": "Central America"
+    },
+    {
+        "country": "Serbia",
+        "exportsByCountry_exports": 25727.95,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.001,
+        "exportsByCountry_mainExport2019": "Insulated Wire",
+        "group": "Manufactured",
+        "region": "Central and Southeast Europe"
+    },
+    {
+        "country": "Libya",
+        "exportsByCountry_exports": 7239.34,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0012,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Northern Africa"
+    },
+    {
+        "country": "Paraguay",
+        "exportsByCountry_exports": 11933.09,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0006,
+        "exportsByCountry_mainExport2019": "Soybeans",
+        "group": "Crops and Livestock",
+        "region": "South America"
+    },
+    {
+        "country": "Kyrgyzstan",
+        "exportsByCountry_exports": 2424.54,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Bulgaria",
+        "exportsByCountry_exports": 38665.09,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0018,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Turkmenistan",
+        "exportsByCountry_exports": 9239,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "El Salvador",
+        "exportsByCountry_exports": 6290.37,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Knit T-shirts",
+        "group": "Manufactured",
+        "region": "Central America"
+    },
+    {
+        "country": "Republic of the Congo",
+        "exportsByCountry_exports": 5524.77,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Unknown"
+    },
+    {
+        "country": "Singapore",
+        "exportsByCountry_exports": 599216.28,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.027,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Denmark",
+        "exportsByCountry_exports": 195424.86,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0082,
+        "exportsByCountry_mainExport2019": "Packaged Medicaments",
+        "group": "Manufactured",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Central African Republic",
+        "exportsByCountry_exports": 390.65,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Rough Wood",
+        "group": "Minerals and Metals",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Slovakia",
+        "exportsByCountry_exports": 89856.05,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0041,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Finland",
+        "exportsByCountry_exports": 97609.8,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0043,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Liberia",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Special Purpose Ships",
+        "group": "Manufactured",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Norway",
+        "exportsByCountry_exports": 117886.33,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0067,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Palestine",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Tropical Fruits",
+        "group": "Crops and Livestock",
+        "region": "Middle East"
+    },
+    {
+        "country": "New Zealand",
+        "exportsByCountry_exports": 45908.12,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0024,
+        "exportsByCountry_mainExport2019": "Concentrated Milk",
+        "group": "Food and Beverages",
+        "region": "Australia and New Zealand"
+    },
+    {
+        "country": "Costa Rica",
+        "exportsByCountry_exports": 19488.98,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0009,
+        "exportsByCountry_mainExport2019": "Medical Instruments",
+        "group": "Manufactured",
+        "region": "Central America"
+    },
+    {
+        "country": "Lebanon",
+        "exportsByCountry_exports": 6237.41,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0005,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Middle East"
+    },
+    {
+        "country": "Ireland",
+        "exportsByCountry_exports": 558393.91,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0192,
+        "exportsByCountry_mainExport2019": "Blood, antisera, vaccines, toxins, and cultures",
+        "group": "Miscellaneous",
+        "region": "British Isles"
+    },
+    {
+        "country": "Mauritania",
+        "exportsByCountry_exports": 3147.67,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Iron Ore",
+        "group": "Minerals and Metals",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Oman",
+        "exportsByCountry_exports": 46185.72,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0017,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Panama",
+        "exportsByCountry_exports": 21379.17,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0011,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Central America"
+    },
+    {
+        "country": "Kuwait",
+        "exportsByCountry_exports": 72583.93,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0032,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Croatia",
+        "exportsByCountry_exports": 24039.83,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0013,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Eritrea",
+        "exportsByCountry_exports": 374.9,
+        "exportsByCountry_dataYear": 2011,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": null,
+        "group": "Miscellaneous",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Georgia",
+        "exportsByCountry_exports": 5909.39,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0004,
+        "exportsByCountry_mainExport2019": "Copper Ore",
+        "group": "Minerals and Metals",
+        "region": "Middle East"
+    },
+    {
+        "country": "Mongolia",
+        "exportsByCountry_exports": 7676.31,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Coal Briquettes",
+        "group": "Energy",
+        "region": "Eastern Asia"
+    },
+    {
+        "country": "Uruguay",
+        "exportsByCountry_exports": 13607.39,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0007,
+        "exportsByCountry_mainExport2019": "Sulfate Chemical Woodpulp",
+        "group": "Energy",
+        "region": "South America"
+    },
+    {
+        "country": "Moldova",
+        "exportsByCountry_exports": 3161.48,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Insulated Wire",
+        "group": "Manufactured",
+        "region": "Eastern Europe"
+    },
+    {
+        "country": "Puerto Rico",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": 0.0025,
+        "exportsByCountry_mainExport2019": null,
+        "group": "Miscellaneous",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Bosnia and Herzegovina",
+        "exportsByCountry_exports": 6885.48,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Electricity",
+        "group": "Energy",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Gambia",
+        "exportsByCountry_exports": 149.41,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Rough Wood",
+        "group": "Minerals and Metals",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Albania",
+        "exportsByCountry_exports": 3440.69,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Leather Footwear",
+        "group": "Miscellaneous",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Jamaica",
+        "exportsByCountry_exports": 5234.91,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Aluminium Oxide",
+        "group": "Minerals and Metals",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Armenia",
+        "exportsByCountry_exports": 3762.49,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Copper Ore",
+        "group": "Minerals and Metals",
+        "region": "Middle East"
+    },
+    {
+        "country": "Qatar",
+        "exportsByCountry_exports": 70933.24,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0042,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Botswana",
+        "exportsByCountry_exports": 4681.13,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Diamonds",
+        "group": "Luxury Items",
+        "region": "Southern Africa"
+    },
+    {
+        "country": "Lithuania",
+        "exportsByCountry_exports": 41562.83,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0016,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Baltic Countries"
+    },
+    {
+        "country": "Namibia",
+        "exportsByCountry_exports": 3544.13,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Raw Copper",
+        "group": "Minerals and Metals",
+        "region": "Southern Africa"
+    },
+    {
+        "country": "Gabon",
+        "exportsByCountry_exports": 7304.27,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Lesotho",
+        "exportsByCountry_exports": 883.95,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Diamonds",
+        "group": "Luxury Items",
+        "region": "Southern Africa"
+    },
+    {
+        "country": "Guinea-Bissau",
+        "exportsByCountry_exports": 205.99,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Coconuts Brazil Nuts and Cashews",
+        "group": "Crops and Livestock",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Slovenia",
+        "exportsByCountry_exports": 41737.2,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0019,
+        "exportsByCountry_mainExport2019": "Packaged Medicaments",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "North Macedonia",
+        "exportsByCountry_exports": 7129.67,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Reaction and Catalytic Products",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Latvia",
+        "exportsByCountry_exports": 20334.7,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0009,
+        "exportsByCountry_mainExport2019": "Sawn Wood",
+        "group": "Minerals and Metals",
+        "region": "Baltic Countries"
+    },
+    {
+        "country": "Equatorial Guinea",
+        "exportsByCountry_exports": 4341.97,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Central Africa"
+    },
+    {
+        "country": "Trinidad and Tobago",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Bahrain",
+        "exportsByCountry_exports": 29564.36,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0012,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Middle East"
+    },
+    {
+        "country": "Timor-Leste",
+        "exportsByCountry_exports": 1307.55,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Unknown"
+    },
+    {
+        "country": "Estonia",
+        "exportsByCountry_exports": 21815.59,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0009,
+        "exportsByCountry_mainExport2019": "Broadcasting Equipment",
+        "group": "Manufactured",
+        "region": "Baltic Countries"
+    },
+    {
+        "country": "Mauritius",
+        "exportsByCountry_exports": 3276.62,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Processed Fish",
+        "group": "Food and Beverages",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Cyprus",
+        "exportsByCountry_exports": 18711.8,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0008,
+        "exportsByCountry_mainExport2019": "Passenger and Cargo Ships",
+        "group": "Manufactured",
+        "region": "Middle East"
+    },
+    {
+        "country": "Eswatini",
+        "exportsByCountry_exports": 1788.68,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Laboratory Glassware",
+        "group": "Manufactured",
+        "region": "Southern Africa"
+    },
+    {
+        "country": "Djibouti",
+        "exportsByCountry_exports": 5193.11,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Other Animals",
+        "group": "Crops and Livestock",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Fiji",
+        "exportsByCountry_exports": 1235.06,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Water",
+        "group": "Miscellaneous",
+        "region": "Unknown"
+    },
+    {
+        "country": "Comoros",
+        "exportsByCountry_exports": 68.87,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Cloves",
+        "group": "Crops and Livestock",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Guyana",
+        "exportsByCountry_exports": 698.04,
+        "exportsByCountry_dataYear": 2005,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Special Purpose Ships",
+        "group": "Manufactured",
+        "region": "South America"
+    },
+    {
+        "country": "Bhutan",
+        "exportsByCountry_exports": 689.74,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Ferroalloys",
+        "group": "Minerals and Metals",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Solomon Islands",
+        "exportsByCountry_exports": 424.43,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Rough Wood",
+        "group": "Minerals and Metals",
+        "region": "Melanesia"
+    },
+    {
+        "country": "Luxembourg",
+        "exportsByCountry_exports": 150147.07,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0061,
+        "exportsByCountry_mainExport2019": "Iron Blocks",
+        "group": "Minerals and Metals",
+        "region": "Western Europe"
+    },
+    {
+        "country": "Suriname",
+        "exportsByCountry_exports": 2295.48,
+        "exportsByCountry_dataYear": 2010,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "South America"
+    },
+    {
+        "country": "Montenegro",
+        "exportsByCountry_exports": 1240.04,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Raw Aluminium",
+        "group": "Minerals and Metals",
+        "region": "Unknown"
+    },
+    {
+        "country": "Cape Verde",
+        "exportsByCountry_exports": 423.39,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Processed Fish",
+        "group": "Food and Beverages",
+        "region": "Western Africa"
+    },
+    {
+        "country": "Malta",
+        "exportsByCountry_exports": 20591.36,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0009,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Maldives",
+        "exportsByCountry_exports": 1851.7,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Fish Fillets",
+        "group": "Food and Beverages",
+        "region": "Southern and Central Asia"
+    },
+    {
+        "country": "Brunei",
+        "exportsByCountry_exports": 6886.07,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0003,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Southeast Asia"
+    },
+    {
+        "country": "Belize",
+        "exportsByCountry_exports": 590.94,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Raw Sugar",
+        "group": "Crops and Livestock",
+        "region": "Central America"
+    },
+    {
+        "country": "Bahamas",
+        "exportsByCountry_exports": 2405.2,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Passenger and Cargo Ships",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Iceland",
+        "exportsByCountry_exports": 7436.03,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0005,
+        "exportsByCountry_mainExport2019": "Raw Aluminium",
+        "group": "Minerals and Metals",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Vanuatu",
+        "exportsByCountry_exports": 156.86,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Melanesia"
+    },
+    {
+        "country": "French Polynesia",
+        "exportsByCountry_exports": 168.81,
+        "exportsByCountry_dataYear": 2000,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Pearls",
+        "group": "Luxury Items",
+        "region": "Polynesia"
+    },
+    {
+        "country": "New Caledonia",
+        "exportsByCountry_exports": 1927.27,
+        "exportsByCountry_dataYear": 2017,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Ferroalloys",
+        "group": "Minerals and Metals",
+        "region": "Melanesia"
+    },
+    {
+        "country": "Barbados",
+        "exportsByCountry_exports": 2188.2,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Hard Liquor",
+        "group": "Food and Beverages",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Samoa",
+        "exportsByCountry_exports": 225.05,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Curacao",
+        "exportsByCountry_exports": 1790.73,
+        "exportsByCountry_dataYear": 2016,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Unknown"
+    },
+    {
+        "country": "Saint Lucia",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Crude Petroleum",
+        "group": "Energy",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Guam",
+        "exportsByCountry_exports": 371,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Scrap Iron",
+        "group": "Minerals and Metals",
+        "region": "Micronesia"
+    },
+    {
+        "country": "Kiribati",
+        "exportsByCountry_exports": 18.95,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Micronesia"
+    },
+    {
+        "country": "Grenada",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Fresh Fish",
+        "group": "Food and Beverages",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Micronesia",
+        "exportsByCountry_exports": 96.9,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Unknown"
+    },
+    {
+        "country": "Tonga",
+        "exportsByCountry_exports": 92.7,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Other Vegetables",
+        "group": "Crops and Livestock",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Seychelles",
+        "exportsByCountry_exports": 790.91,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Eastern Africa"
+    },
+    {
+        "country": "Aruba",
+        "exportsByCountry_exports": 2363.2,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Refined Petroleum",
+        "group": "Energy",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Saint Vincent and the Grenadines",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Petroleum Gas",
+        "group": "Energy",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Antigua and Barbuda",
+        "exportsByCountry_exports": 598.87,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Passenger and Cargo Ships",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Andorra",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Dominica",
+        "exportsByCountry_exports": 161.96,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Medical Instruments",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Cayman Islands",
+        "exportsByCountry_exports": 3372.61,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Recreational Boats",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Bermuda",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": 0.0002,
+        "exportsByCountry_mainExport2019": "Planes Helicopters and/or Spacecraft",
+        "group": "Manufactured",
+        "region": "North America"
+    },
+    {
+        "country": "Greenland",
+        "exportsByCountry_exports": 1156.6,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "North America"
+    },
+    {
+        "country": "Faroe Islands",
+        "exportsByCountry_exports": 1788.68,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": null,
+        "group": "Miscellaneous",
+        "region": "Nordic Countries"
+    },
+    {
+        "country": "Northern Mariana Islands",
+        "exportsByCountry_exports": 497,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Scrap Iron",
+        "group": "Minerals and Metals",
+        "region": "Micronesia"
+    },
+    {
+        "country": "Saint Kitts and Nevis",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Low-voltage Protection Equipment",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Turks and Caicos Islands",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Plastic Building Materials",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Sint Maarten",
+        "exportsByCountry_exports": 800,
+        "exportsByCountry_dataYear": 2018,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": null,
+        "group": "Miscellaneous",
+        "region": "Unknown"
+    },
+    {
+        "country": "American Samoa",
+        "exportsByCountry_exports": 426,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Animal Meal and Pellets",
+        "group": "Crops and Livestock",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Marshall Islands",
+        "exportsByCountry_exports": 85.53,
+        "exportsByCountry_dataYear": 2020,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Passenger and Cargo Ships",
+        "group": "Manufactured",
+        "region": "Micronesia"
+    },
+    {
+        "country": "San Marino",
+        "exportsByCountry_exports": 2650.8,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": 0.0001,
+        "exportsByCountry_mainExport2019": "Washing and Bottling Machines",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Gibraltar",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Cars",
+        "group": "Manufactured",
+        "region": "Southern Europe"
+    },
+    {
+        "country": "Saint Martin",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Gold",
+        "group": "Luxury Items",
+        "region": "Unknown"
+    },
+    {
+        "country": "British Virgin Islands",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Recreational Boats",
+        "group": "Manufactured",
+        "region": "Unknown"
+    },
+    {
+        "country": "Palau",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Fresh Fish",
+        "group": "Food and Beverages",
+        "region": "Micronesia"
+    },
+    {
+        "country": "Cook Islands",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Anguilla",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Packaged Medicaments",
+        "group": "Manufactured",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Nauru",
+        "exportsByCountry_exports": 23.6,
+        "exportsByCountry_dataYear": 2019,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Micronesia"
+    },
+    {
+        "country": "Tuvalu",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
+        "group": "Food and Beverages",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Wallis and Futuna",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Integrated Circuits",
+        "group": "Manufactured",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Saint Pierre and Miquelon",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Processed Crustaceans",
+        "group": "Manufactured",
+        "region": "North America"
+    },
+    {
+        "country": "Montserrat",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Sand",
+        "group": "Food and Beverages",
+        "region": "Caribbean"
+    },
+    {
+        "country": "Falkland Islands",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Molluscs",
+        "group": "Crops and Livestock",
+        "region": "South America"
+    },
+    {
+        "country": "Niue",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Passenger and Cargo Ships",
+        "group": "Manufactured",
+        "region": "Polynesia"
+    },
+    {
+        "country": "Tokelau",
+        "exportsByCountry_exports": null,
+        "exportsByCountry_dataYear": null,
+        "exportsByCountry_percGlobalExports2018": null,
+        "exportsByCountry_mainExport2019": "Oscilloscopes",
+        "group": "Manufactured",
+        "region": "Polynesia"
+    }
+]
