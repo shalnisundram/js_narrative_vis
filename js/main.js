@@ -47,26 +47,29 @@ function createSlides(data) {
 }
 
 function createBarChart(container, data, tooltip) {
-    const margin = { top: 20, right: 30, bottom: 40, left: 40 };
+    const margin = {top: 10, right: 30, bottom: 100, left: 40 };
     const width = container.node().clientWidth - margin.left - margin.right;
     const height = container.node().clientHeight - margin.top - margin.bottom;
 
     const svg = container.append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("height", height + margin.top + margin.bottom )
       .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
+      .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const groupColors = {
-        "Energy Products": "#f7c435", // yellow
+        "Energy": "#f7c435", // yellow
         "Minerals and Metals": "#85a993", // light green
-        "Agricultural Products": "#818b2e", // olive green
-        "Manufactured Goods": "#85a993", // dark pink ba4848
+        "Crops and Livestock": "#818b2e", // olive green
+        "Manufactured": "#ba4848", // dark pink 
         "Food and Beverages": "#c75a1b", // dark orange
         "Luxury Items": "#dc8864", // peach
         "Miscellaneous": "#f0b6ad", // light pink
         "Unclassified": "#0b5227" // dark green
     };
+
+    const continentGroups = d3.group(data, d => d.region);
+    const continents = Array.from(continentGroups.keys());
     // X scale
     const x = d3.scaleBand()
         .domain(data.map(d => d.country))
@@ -84,8 +87,9 @@ function createBarChart(container, data, tooltip) {
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x))
         .selectAll("text")
-        .attr("transform", "rotate(-45)")
-        .style("text-anchor", "end");
+        .remove();
+        // .attr("transform", "rotate(-45)")
+        // .style("text-anchor", "end");
 
     // Y axis
     svg.append("g")
@@ -114,4 +118,53 @@ function createBarChart(container, data, tooltip) {
                 .duration(500)
                 .style("opacity", 0);
         });
+
+        createLegend(svg, groupColors, width);
+}
+
+function createLegend(svg, groupColors, width) {
+    const legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${width - 110}, ${-5})`); // Shifted to the left by 200 pixels
+
+    const legendKeys = Object.keys(groupColors);
+
+    const legendItemHeight = 8;
+    const legendItemWidth = 8;
+    const legendSpacing = 4;
+    const legendPadding = 10;
+
+    // Calculate legend box dimensions
+    const legendBoxHeight = (legendItemHeight + legendSpacing) * legendKeys.length - legendSpacing + 2 * legendPadding;
+    const legendBoxWidth = 100;
+
+    // Append legend box
+    legend.append("rect")
+        .attr("x", -legendPadding)
+        .attr("y", -legendPadding)
+        .attr("width", legendBoxWidth)
+        .attr("height", legendBoxHeight)
+        .style("fill", "none")
+        .style("stroke", "black")
+        .style("stroke-width", "1px");
+
+    // Append legend items
+    legend.selectAll("rect.legend-item")
+        .data(legendKeys)
+        .enter().append("rect")
+        .attr("class", "legend-item")
+        .attr("x", 0)
+        .attr("y", (d, i) => i * (legendItemHeight + legendSpacing))
+        .attr("width", legendItemWidth)
+        .attr("height", legendItemHeight)
+        .style("fill", d => groupColors[d]);
+
+    legend.selectAll("text")
+        .data(legendKeys)
+        .enter().append("text")
+        .attr("x", legendItemWidth + legendSpacing)
+        .attr("y", (d, i) => i * (legendItemHeight + legendSpacing) + legendItemHeight / 2)
+        .attr("dy", ".35em")
+        .attr("font-size", "8px")
+        .text(d => d);
 }

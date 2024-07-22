@@ -54,3 +54,4 @@ for i in json_data:
 
 with open("/Users/shalnisundram/Documents/UIUC/Academics/Summer2024Semester!/CS_416/js_narrative_vis/data/exports-by-country-2024.json", 'w') as fp:
     json.dump(json_data, fp, indent=4)
+    
