@@ -1,5 +1,5 @@
 d3.json("data/updated-exports-by-country-2024.json").then(data => {
-    let currentSlide = -1;
+    let currentSlide = 0;
     const slides = createSlides(data);
 
     const tooltip = d3.select("body").append("div")
@@ -12,30 +12,37 @@ d3.json("data/updated-exports-by-country-2024.json").then(data => {
         const container = d3.select("#slide-container");
 
         container.html("");  // Clear previous content
-        createBarChart(container, slide, tooltip);
-        updateSlideTitle(slide, 0);
-        container.html("");  // Clear previous content
         updateSlideTitle(slide, index+1);
         createBarChart(container, slide, tooltip);
     }
 
     document.getElementById("prev").addEventListener("click", () => {
-        if (currentSlide > 0) {
+        if (currentSlide > 1) {
             currentSlide--;
+            updateSlideTitle(slides[currentSlide], currentSlide);
             showSlide(currentSlide);
-        } 
-        
+            console.log(currentSlide)
+        } else {
+            currentSlide--;
+            const container = d3.select("#slide-container");
+            container.html("");
+            updateSlideTitle(slides[1], 1);
+            createBarChart(container, slides[0], tooltip);
+        }
     });
 
     document.getElementById("next").addEventListener("click", () => {
         if (currentSlide < slides.length - 1) {
             currentSlide++;
+            updateSlideTitle(slides[currentSlide], currentSlide);
             showSlide(currentSlide);
+            console.log(currentSlide)
         }
     });
     // Show the first slide
     updateSlideTitle(slides[1], 1);
-    showSlide(currentSlide);
+    const container = d3.select("#slide-container");
+    createBarChart(container, slides[0], tooltip);
 });
 
 function createSlides(data) {
