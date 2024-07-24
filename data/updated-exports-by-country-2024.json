@@ -132,7 +132,7 @@
         "exportsByCountry_percGlobalExports2018": 0.0007,
         "exportsByCountry_mainExport2019": "Refined Copper",
         "group": "Minerals and Metals",
-        "region": "Unknown"
+        "region": "Central Africa"
     },
     {
         "country": "Vietnam",
@@ -528,7 +528,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Integrated Circuits",
         "group": "Manufactured",
-        "region": "Unknown"
+        "region": "Eastern Asia"
     },
     {
         "country": "Burkina Faso",
@@ -1014,7 +1014,7 @@
         "exportsByCountry_percGlobalExports2018": 0.0004,
         "exportsByCountry_mainExport2019": "Crude Petroleum",
         "group": "Energy",
-        "region": "Unknown"
+        "region": "Central Africa"
     },
     {
         "country": "Singapore",
@@ -1392,7 +1392,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Crude Petroleum",
         "group": "Energy",
-        "region": "Unknown"
+        "region": "Melanesia"
     },
     {
         "country": "Estonia",
@@ -1446,7 +1446,7 @@
         "exportsByCountry_percGlobalExports2018": 0.0001,
         "exportsByCountry_mainExport2019": "Water",
         "group": "Miscellaneous",
-        "region": "Unknown"
+        "region": "Micronesia"
     },
     {
         "country": "Comoros",
@@ -1509,7 +1509,7 @@
         "exportsByCountry_percGlobalExports2018": 0.0001,
         "exportsByCountry_mainExport2019": "Raw Aluminium",
         "group": "Minerals and Metals",
-        "region": "Unknown"
+        "region": "Southern Europe"
     },
     {
         "country": "Cape Verde",
@@ -1626,7 +1626,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Gold",
         "group": "Luxury Items",
-        "region": "Unknown"
+        "region": "Caribbean"
     },
     {
         "country": "Saint Lucia",
@@ -1671,7 +1671,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Non-fillet Frozen Fish",
         "group": "Food and Beverages",
-        "region": "Unknown"
+        "region": "Micronesia"
     },
     {
         "country": "Tonga",
@@ -1806,7 +1806,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": null,
         "group": "Miscellaneous",
-        "region": "Unknown"
+        "region": "British Isles"
     },
     {
         "country": "American Samoa",
@@ -1851,7 +1851,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Gold",
         "group": "Luxury Items",
-        "region": "Unknown"
+        "region": "Caribbean"
     },
     {
         "country": "British Virgin Islands",
@@ -1860,7 +1860,7 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Recreational Boats",
         "group": "Manufactured",
-        "region": "Unknown"
+        "region": "Caribbean"
     },
     {
         "country": "Palau",
