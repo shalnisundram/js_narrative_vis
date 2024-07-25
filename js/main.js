@@ -16,7 +16,7 @@ d3.json("data/updated-exports-by-country-2024.json").then(data => {
 
         container.html("");  // Clear previous content
         updateSlideTitle(slide, index+1);
-        createBarChart(container, slide, tooltip);
+        createBarChart(container, slide, tooltip, index+1);
     }
 
     document.getElementById("prev").addEventListener("click", () => {
@@ -72,7 +72,7 @@ function updateSlideTitle(slideData, slideNumber) {
     d3.select("#slide-title").text(`Slide ${slideNumber}: Global Exports ${minPerc.toFixed(4)} - ${maxPerc.toFixed(4)}%`);
 }
 
-function createBarChart(container, data, tooltip) {
+function createBarChart(container, data, tooltip, slideNumber) {
     const margin = { top: 10, right: 10, bottom:50, left: 40 };
     const width = container.node().clientWidth - margin.left - margin.right;
     const height = container.node().clientHeight - margin.top - margin.bottom;
@@ -151,6 +151,12 @@ function createBarChart(container, data, tooltip) {
             tooltip.html(`Country: ${d.country}<br>Exports: ${d.exportsByCountry_exports}<br>Main Export: ${d.exportsByCountry_mainExport2019}<br>Group: ${d.group}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
+
+            const tooltipPosition = {
+                left: event.pageX + 5,
+                top: event.pageY - 28 + tooltip.node().offsetHeight // Adjust for the tooltip height
+            };
+            showImage(imagePath, tooltipPosition);
         })
         .on("mouseout", function () {
             tooltip.transition()
@@ -164,10 +170,10 @@ function createBarChart(container, data, tooltip) {
         .attr("y", d => y(d.exportsByCountry_exports))
         .attr("height", d => height - y(d.exportsByCountry_exports));
 
-    createLegend(svg, groupColors, width);
+    createLegend(svg, groupColors, width, slideNumber);
 }
 
-function createLegend(svg, groupColors, width) {
+function createLegend(svg, groupColors, width, slideNumber) {
     const legend = svg.append("g")
         .attr("class", "legend")
         .attr("transform", `translate(${width - 300}, ${20})`); // Shifted to the left by 250 pixels
@@ -206,7 +212,7 @@ function createLegend(svg, groupColors, width) {
             .attr("height", legendItemHeight)
             .style("fill", groupColors[key])
             .style("cursor", "pointer")
-            .on("click", () => handleLegendClick(key));
+            .on("click", (event, d) => handleLegendItemClick(d, slideNumber));
         // Append legend text
         legend.append("text")
             .attr("x", col * rowWidth + legendItemWidth + legendSpacing - 7)
@@ -219,17 +225,18 @@ function createLegend(svg, groupColors, width) {
 function handleLegendClick(group) {
     const slide = slides[currentSlide];
 
+    console.log("hie")
     // Find the country with the maximum exports for the clicked group
     const maxExportCountry = slide
         .filter(d => d.group === group)
         .reduce((max, d) => d.exportsByCountry_exports > max.exportsByCountry_exports ? d : max, { exportsByCountry_exports: -Infinity });
 
     // Zoom to the selected bar (you may need to adjust this part based on your actual chart layout)
-    zoomToBar(maxExportCountry);
+    highlightBar(maxExportCountry);
 }
 
 
-function zoomToBar(country) {
+function highlightBar(country) {
     const svg = d3.select("#slide-container svg");
 
     // Select all bars, tweak opacity
@@ -265,7 +272,6 @@ function zoomToBar(country) {
             <strong>Country:</strong> ${d.country} <br>
             <strong>Exports:</strong> ${d.exportsByCountry_exports} <br>
             <strong>Main Export:</strong> ${d.exportsByCountry_mainExport2019} <br>
-            <a href="https://oec.world/en/profile/bilateral-product/gold/reporter/mrt">Product Link</a>
         </div>
         `)
         .transition()
@@ -274,6 +280,15 @@ function zoomToBar(country) {
 
     // Remove previous annotations on slide change
     svg.selectAll(".annotation").exit().remove();
+
+    const bar = svg.selectAll(".bar").filter(d => d.country === country.country).node();
+    if (bar) {
+        console.log("bar")
+        console.log(bar)
+        const barPosition = bar.getBoundingClientRect();
+        const imagePath = `data/image_annotations/slide${currentSlide + 1}/${country.group.toLowerCase().replace(/ /g, "_")}.png`;
+        showImage(imagePath, barPosition);
+    }
 }
 
 // Calculate legend box dimensions
@@ -309,4 +324,97 @@ legend.append("rect")
         .attr("dy", ".35em")
         .attr("font-size", "8px")
         .text(d => d);
+
+    
+        function showImage(imagePath, tooltipPosition) {
+            const container = d3.select("#slide-container").node();
+            const containerPosition = container.getBoundingClientRect();
+            
+            const imgContainer = d3.select("#slide-container");
+            imgContainer.selectAll("img.annotation-image").remove(); // Clear existing images
+        
+            if (tooltipPosition) {
+                const img = imgContainer.append("img")
+                    .attr("src", imagePath)
+                    .attr("class", "annotation-image")
+                    .style("display", "none")
+                    .style("position", "absolute")
+                    .style("z-index", "10") // Ensures the image is above other elements
+                    .style("width", "200px") // Initial width
+                    .style("height", "auto") // Maintain aspect ratio
+                    .style("left", `${tooltipPosition.left}px`)
+                    .style("top", `${tooltipPosition.top}px`)
+                    .on("load", function () {
+                        d3.select(this).transition()
+                            .duration(500)
+                            .style("display", "block");
+                    })
+                    .on("error", function () {
+                        d3.select(this).remove(); // Remove the image if not found
+                        d3.select("#popup").style("display", "block");
+                    });
+        
+                img.on("mouseover", function () {
+                    d3.select(this).classed("hover-zoom", true);
+                });
+        
+                img.on("mouseout", function () {
+                    d3.select(this).classed("hover-zoom", false);
+                });
+        
+                img.on("wheel", function (event) {
+                    event.preventDefault();
+                    const zoomFactor = 0.1;
+                    const imgElement = d3.select(this);
+                    let transform = imgElement.style("transform");
+                    let scaleMatch = transform.match(/scale\(([^)]+)\)/);
+                    let currentScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+        
+                    const newScale = event.deltaY < 0 ? currentScale * (1 + zoomFactor) : currentScale / (1 + zoomFactor);
+        
+                    imgElement
+                        .style("transform-origin", "center center")
+                        .style("transform", `scale(${newScale})`);
+                });
+            } else {
+                console.error("Bar position is undefined.");
+            }
+        }
+
+    function handleLegendItemClick(group, slideNumber) {
+        const imagePath = `data/image_annotations/slide${slideNumber}/${group.toLowerCase().replace(/ /g, "_")}.png`;
+        
+        console.log(imagePath)
+        // Create an Image object to check if the file exists
+        const img = new Image();
+        img.src = imagePath;
+    
+        img.onload = function() {
+            // Image exists and is loaded, show it
+          //  showImage(imagePath);
+            handleLegendClick(group);
+        };
+    
+        img.onerror = function() {
+            // Image doesn't exist, show a popup
+            showPopup("No data on this commodity")
+        };
+    }
+
+
+    function showPopup(message) {
+        const popup = d3.select("#popup");
+        popup.style("display", "flex");
+        popup.select("p").text(message);
+        
+        // Add event listener to close the popup
+        popup.select(".close-btn").on("click", () => {
+            popup.style("display", "none");
+        });
+
+        // Optionally, hide the popup after a delay
+        setTimeout(() => {
+            popup.style("display", "none");
+        }, 3000); // Hide after 3 seconds
+}
 }

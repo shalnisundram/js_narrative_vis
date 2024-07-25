@@ -27,6 +27,30 @@ body {
     margin: 20px 0;
 }
 
+#image-container img {
+    position: absolute; /* Allows precise positioning */
+    width: 0px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    top: -500px; /* Vertical position */
+    left: 100px; /* Horizontal position */
+    border: 1px solid #ccc; /* Optional border for clarity */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.annotation-image {
+    transition: transform 0.25s ease;
+}
+
+.annotation-image:hover {
+    transform: scale(1.2);
+    z-index: 20;
+}
+
+.zoomed {
+    transition: transform 0.25s ease;
+}
+
 button {
     padding: 10px 20px;
     margin: 5px;
@@ -64,3 +88,39 @@ button:hover {
     color: #ecf7bd;
     border-color: #b910406f;
 }
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it appears above other content */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
