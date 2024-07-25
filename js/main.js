@@ -73,7 +73,7 @@ function updateSlideTitle(slideData, slideNumber) {
 }
 
 function createBarChart(container, data, tooltip, slideNumber) {
-    const margin = { top: 10, right: 10, bottom:50, left: 40 };
+    const margin = { top: 10, right: 10, bottom: 50, left: 40 };
     const width = container.node().clientWidth - margin.left - margin.right;
     const height = container.node().clientHeight - margin.top - margin.bottom;
 
@@ -84,39 +84,41 @@ function createBarChart(container, data, tooltip, slideNumber) {
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const groupColors = {
-        "Energy": "#f7c435", // yellow
-        "Minerals and Metals": "#85a993", // light green
-        "Crops and Livestock": "#818b2e", // olive green
-        "Manufactured": "#ba4848", // dark pink 
-        "Food and Beverages": "#c75a1b", // dark orange
-        "Luxury Items": "#dc8864", // peach
-        "Miscellaneous": "#f0b6ad", // light pink
-        "Unclassified": "#0b5227" // dark green
+        "Energy": "#f7c435",
+        "Minerals and Metals": "#85a993",
+        "Crops and Livestock": "#818b2e",
+        "Manufactured": "#ba4848",
+        "Food and Beverages": "#c75a1b",
+        "Luxury Items": "#dc8864",
+        "Miscellaneous": "#f0b6ad",
+        "Unclassified": "#0b5227"
     };
 
-    // Group data by region
     const regionGroups = d3.group(data, d => d.region);
     const regions = Array.from(regionGroups.keys());
 
-    // X scale for regions
     const x0 = d3.scaleBand()
         .domain(regions)
         .range([0, width])
         .padding(0.1);
 
-    // X scale for countries within each region
     const x1 = d3.scaleBand()
         .domain(data.map(d => d.country))
         .range([0, x0.bandwidth()])
         .padding(-5);
 
-    // Y scale
     const y = d3.scaleLinear()
         .domain([0, d3.max(data, d => Math.max(0, d.exportsByCountry_exports))])
         .nice()
         .range([height, 0]);
 
-    // X axis for regions
+    const xAxis = svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x0))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
     svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x0))
@@ -124,12 +126,9 @@ function createBarChart(container, data, tooltip, slideNumber) {
         .attr("transform", "rotate(-45)")
         .style("text-anchor", "end");
 
-    // Y axis
     svg.append("g")
         .call(d3.axisLeft(y));
 
-    
-    // Bars
     const bars = svg.selectAll(".region-group")
         .data(regions)
         .enter().append("g")
@@ -140,9 +139,9 @@ function createBarChart(container, data, tooltip, slideNumber) {
         .enter().append("rect")
         .attr("class", "bar")
         .attr("x", d => x1(d.country))
-        .attr("y", height) // Start at the bottom of the chart
+        .attr("y", height)
         .attr("width", x1.bandwidth())
-        .attr("height", 0) // Start with height 0
+        .attr("height", 0)
         .attr("fill", d => groupColors[d.group])
         .on("mouseover", function (event, d) {
             tooltip.transition()
@@ -152,11 +151,7 @@ function createBarChart(container, data, tooltip, slideNumber) {
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
 
-            const tooltipPosition = {
-                left: event.pageX + 5,
-                top: event.pageY - 28 + tooltip.node().offsetHeight // Adjust for the tooltip height
-            };
-            showImage(imagePath, tooltipPosition);
+            showAnnotation(d);
         })
         .on("mouseout", function () {
             tooltip.transition()
@@ -164,14 +159,105 @@ function createBarChart(container, data, tooltip, slideNumber) {
                 .style("opacity", 0);
         });
 
-    // Apply transition to bars
     bars.transition()
-        .duration(750) // Duration of the transition in milliseconds
+        .duration(750)
         .attr("y", d => y(d.exportsByCountry_exports))
         .attr("height", d => height - y(d.exportsByCountry_exports));
 
     createLegend(svg, groupColors, width, slideNumber);
+
+    function showAnnotation(data) {
+        const bar = svg.selectAll(".bar").filter(d => d.country === data.country).node();
+        if (bar) {
+            const barPosition = bar.getBoundingClientRect();
+            const svgPosition = svg.node().getBoundingClientRect();
+
+            const annotation = svg.append("g")
+                .attr("class", "annotation")
+                .attr("transform", `translate(${x1(data.country) + x0(data.region) + x1.bandwidth() / 2}, ${y(data.exportsByCountry_exports)})`);
+
+            // annotation.append("line")
+            //     .attr("x1", 0)
+            //     .attr("y1", 0)
+            //     .attr("x2", 0)
+            //     .attr("y2", -20)
+            //     .attr("stroke", "black")
+            //     .attr("stroke-width", 1);
+
+            // annotation.append("text")
+            //     .attr("x", 5)
+            //     .attr("y", -25)
+            //     .attr("font-size", "10px")
+            //     .attr("fill", "black")
+            //     .text(`${data.country}: ${data.exportsByCountry_exports}`);
+        }
+    }
+
+    data.forEach(d => showAnnotation(d));
+
+    if (slideNumber === 5) { 
+        circleRegion(x0("Eastern Asia"), x0.bandwidth(), height, margin)
+    }
+    function circleRegion(pos, width, height, margin) {
+        svg.append("circle")
+            .attr("cx", pos + width / 2 - 10)
+            .attr("cy", height + margin.bottom / 2)
+            .attr("r", 30) 
+            .attr("stroke", "red")
+            .attr("stroke-width", 2)
+            .attr("fill", "none");
+
+        // Add the arrow marker
+        svg.append("defs").append("marker")
+            .attr("id", "arrowhead")
+            .attr("viewBox", "-0 -5 10 10")
+            .attr("refX", 5)
+            .attr("refY", 0)
+            .attr("orient", "auto")
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("xoverflow", "visible")
+            .append("svg:path")
+            .attr("d", "M 0,-5 L 10,0 L 0,5")
+            .attr("fill", "red")
+            .style("stroke", "none");
+
+            // Coordinates for the arrow and note
+            const circleX = pos + width / 2;
+            const circleY = height + margin.bottom / 2;
+            const arrowX1 = circleX - 50;  // Starting X position (left of the circle)
+            const arrowY1 = circleY - 50;  // Starting Y position
+            const noteX = arrowX1 - 5;     // Note position (adjust as needed)
+            const noteY = arrowY1 - 5;     // Note position (adjust as needed)
+            const angle = Math.PI / 4;
+            
+
+            // Add the arrow line
+            svg.append("line")
+            .attr("x1", arrowX1)
+            .attr("y1", arrowY1)
+            .attr("x2", circleX)
+            .attr("y2", circleY)
+            .attr("stroke", "red")
+            .attr("stroke-width", 2)
+            .attr("marker-end", "url(#arrowhead)");
+
+                // Calculate the edge of the circle based on the angle
+        // const angle = Math.PI / 4; // Angle from the center to the edge (45 degrees, adjust as needed)
+        // const arrowX1 = circleX - (radius + 20) * Math.cos(angle); // Adjust distance from circle edge
+        // const arrowY1 = circleY - (radius + 20) * Math.sin(angle); // Adjust distance from circle edge
+
+            // Add the note text
+            svg.append("text")
+                .attr("x", noteX)
+                .attr("y", noteY)
+                .attr("fill", "red")
+                .attr("font-size", "12px")
+                .text("Eastern Asia region");
+    }
 }
+
+
 
 function createLegend(svg, groupColors, width, slideNumber) {
     const legend = svg.append("g")
@@ -327,30 +413,37 @@ legend.append("rect")
 
     
         function showImage(imagePath, tooltipPosition) {
-            const container = d3.select("#slide-container").node();
-            const containerPosition = container.getBoundingClientRect();
-            
             const imgContainer = d3.select("#slide-container");
-            imgContainer.selectAll("img.annotation-image").remove(); // Clear existing images
+            imgContainer.selectAll("div.annotation-image-container").remove(); // Clear existing images
         
             if (tooltipPosition) {
-                const img = imgContainer.append("img")
-                    .attr("src", imagePath)
-                    .attr("class", "annotation-image")
-                    .style("display", "none")
+                const imgWrapper = imgContainer.append("div")
+                    .attr("class", "annotation-image-container")
                     .style("position", "absolute")
-                    .style("z-index", "10") // Ensures the image is above other elements
-                    .style("width", "200px") // Initial width
-                    .style("height", "auto") // Maintain aspect ratio
                     .style("left", `${tooltipPosition.left}px`)
                     .style("top", `${tooltipPosition.top}px`)
+                    .style("z-index", "10");
+        
+                const zoomContainer = imgWrapper.append("div")
+                    .attr("class", "zoom-container")
+                    .style("position", "relative")
+                    .style("display", "inline-block")
+                    .style("width", "200px") // Initial width
+                    .style("height", "auto");
+        
+                const img = zoomContainer.append("img")
+                    .attr("src", imagePath)
+                    .attr("class", "annotation-image")
+                    .style("display", "block")
+                    .style("width", "100%")
+                    .style("height", "auto") // Maintain aspect ratio
                     .on("load", function () {
                         d3.select(this).transition()
                             .duration(500)
                             .style("display", "block");
                     })
                     .on("error", function () {
-                        d3.select(this).remove(); // Remove the image if not found
+                        imgWrapper.remove(); // Remove the image container if not found
                         d3.select("#popup").style("display", "block");
                     });
         
@@ -364,24 +457,44 @@ legend.append("rect")
         
                 img.on("wheel", function (event) {
                     event.preventDefault();
+        
                     const zoomFactor = 0.1;
-                    const imgElement = d3.select(this);
-                    let transform = imgElement.style("transform");
+                    const zoomContainer = d3.select(this.parentNode);
+                    let transform = zoomContainer.style("transform");
                     let scaleMatch = transform.match(/scale\(([^)]+)\)/);
                     let currentScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
         
                     const newScale = event.deltaY < 0 ? currentScale * (1 + zoomFactor) : currentScale / (1 + zoomFactor);
         
-                    imgElement
+                    zoomContainer
                         .style("transform-origin", "center center")
                         .style("transform", `scale(${newScale})`);
                 });
+        
+                // Add close button
+                zoomContainer.append("button")
+                    .attr("class", "close-btn")
+                    .text("Close")
+                    .style("position", "absolute")
+                    .style("top", "50x")
+                    .style("right", "75px")
+                    .on("click", function () {
+                        imgWrapper.remove(); // Remove the image container
+                        d3.selectAll(".bar").style("opacity", 1); // Reset bar opacity
+                        d3.selectAll(".x-axis text")
+                            .style("fill", "black")
+                            .style("font-weight", "normal"); // Reset label styles
+                        d3.selectAll(".annotation").remove(); // Remove annotations
+                    });
             } else {
-                console.error("Bar position is undefined.");
+                console.error("Tooltip position is undefined.");
             }
         }
 
     function handleLegendItemClick(group, slideNumber) {
+        if (typeof slideNumber === 'undefined') {
+            slideNumber = 1
+        }
         const imagePath = `data/image_annotations/slide${slideNumber}/${group.toLowerCase().replace(/ /g, "_")}.png`;
         
         console.log(imagePath)
@@ -401,7 +514,6 @@ legend.append("rect")
         };
     }
 
-
     function showPopup(message) {
         const popup = d3.select("#popup");
         popup.style("display", "flex");
@@ -416,5 +528,5 @@ legend.append("rect")
         setTimeout(() => {
             popup.style("display", "none");
         }, 3000); // Hide after 3 seconds
-}
+    }
 }
