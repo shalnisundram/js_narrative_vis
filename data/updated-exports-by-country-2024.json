@@ -179,7 +179,8 @@
         "exportsByCountry_percGlobalExports2018": 0.0133,
         "exportsByCountry_mainExport2019": "Office Machine Parts",
         "group": "Manufactured",
-        "region": "Southeast Asia"
+        "region": "Southeast Asia",
+        "flag": "data/image_annotations/flags/thailand_flag.png"
     },
     {
         "country": "Tanzania",
@@ -503,7 +504,8 @@
         "exportsByCountry_percGlobalExports2018": null,
         "exportsByCountry_mainExport2019": "Watch Movements",
         "group": "Manufactured",
-        "region": "Eastern Asia"
+        "region": "Eastern Asia",
+        "flag": "data/image_annotations/flags/north_korea_flag.png"
     },
     {
         "country": "Syria",
@@ -656,7 +658,8 @@
         "exportsByCountry_percGlobalExports2018": 0.0006,
         "exportsByCountry_mainExport2019": "Knit Sweaters",
         "group": "Manufactured",
-        "region": "Southeast Asia"
+        "region": "Southeast Asia",
+        "flag": "data/image_annotations/flags/cambodia_flag.png"
     },
     {
         "country": "Zimbabwe",
@@ -1025,7 +1028,8 @@
         "exportsByCountry_percGlobalExports2018": 0.027,
         "exportsByCountry_mainExport2019": "Integrated Circuits",
         "group": "Manufactured",
-        "region": "Southeast Asia"
+        "region": "Southeast Asia",
+        "flag": "data/image_annotations/flags/singapore_flag.png"
     },
     {
         "country": "Denmark",
@@ -1548,7 +1552,8 @@
         "exportsByCountry_percGlobalExports2018": 0.0003,
         "exportsByCountry_mainExport2019": "Petroleum Gas",
         "group": "Energy",
-        "region": "Southeast Asia"
+        "region": "Southeast Asia",
+        "flag": "data/image_annotations/flags/brunei_flag.png"
     },
     {
         "country": "Belize",
@@ -1755,7 +1760,8 @@
         "exportsByCountry_percGlobalExports2018": 0.0002,
         "exportsByCountry_mainExport2019": "Planes Helicopters and/or Spacecraft",
         "group": "Manufactured",
-        "region": "North America"
+        "region": "North America",
+        "flag": "data/image_annotations/flags/bermuda_flag.png"
     },
     {
         "country": "Greenland",

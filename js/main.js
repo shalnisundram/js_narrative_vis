@@ -287,7 +287,7 @@ function createBarChart(container, data, tooltip, slideNumber) {
         var xpos;
     
         if (maxCategoryData.country == "Poland") { // slide 1
-            text_str = "Notice the red background to match manufactured goods, the highest export commodity in the lower half of the top 0.01% of export goods in 2018";
+            text_str = "Notice the red background to match manufactured goods, the highest export commodity in the lower half of the top 0.01% of export goods in 2018. <br>North Korea represents Eastern Asia - a top overall export region in this slideshow - in this % group  with manufacturing exports<br><br> TIPS <br> Click legend items and zoom into OEC blurbs for more commodity details! <br> Hover over bars for more general info";
             xpos = 200
             ypos = 80
         }
@@ -297,12 +297,12 @@ function createBarChart(container, data, tooltip, slideNumber) {
             ypos = 90
         }
         if (maxCategoryData.country == "Cambodia") { // slide 3
-            text_str = "Top 3 export regions: East Asia, North America, and Southeast Asia, dominate this percentage group in energy. ";
+            text_str = "Top 3 overall export regions become more prominent. East Asia, North America, and Southeast Asia dominate this % group in energy. ";
             xpos = 0
             ypos = 70
         }
         if (maxCategoryData.country == "Romania") { // slide 4
-            text_str = "Tier 2 export countries dominate this perctage group in manufacturing and energy";
+            text_str = "Tier 2 export countries dominate this % group in manufacturing and energy, mainly";
             xpos = 100
             ypos = 80
         }

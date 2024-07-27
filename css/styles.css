@@ -158,24 +158,44 @@ button:hover {
     outline: none;
 }
 
+/* styles.css */
 .overlay-box {
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for a smaller box */
     border-radius: 8px;
     position: absolute;
-    max-width: 400px;
+    max-width: 300px; /* Reduced max-width */
     /* Adjust width and height as needed */
     width: auto;
     height: auto;
     z-index: 500; /* Ensure this is higher than other elements */
-
 }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
+
+.overlay-box p {
+    font-size: 12px; /* Smaller font size */
+    line-height: 1.2; /* Adjust line height if necessary */
+}
+
+.collapsible-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Reduced padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Smaller font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: none;
+}
+
+.collapsible-button:hover {
+    background-color: #45a049;
+}
+
+.collapsible-button:focus {
+    outline: none;
+}
