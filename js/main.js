@@ -73,7 +73,7 @@ function updateSlideTitle(slideData, slideNumber) {
 }
 
 function createBarChart(container, data, tooltip, slideNumber) {
-    const margin = { top: 10, right: 10, bottom: 50, left: 40 };
+    const margin = { top: 10, right: 10, bottom: 80, left: 60 };
     const width = container.node().clientWidth - margin.left - margin.right;
     const height = container.node().clientHeight - margin.top - margin.bottom;
 
@@ -85,11 +85,11 @@ function createBarChart(container, data, tooltip, slideNumber) {
 
     const groupColors = {
         "Energy": "#f7c435",
-        "Minerals and Metals": "#85a993",
+        "Minerals and Metals": "#dc8864",
         "Crops and Livestock": "#818b2e",
         "Manufactured": "#ba4848",
         "Food and Beverages": "#c75a1b",
-        "Luxury Items": "#dc8864",
+        "Luxury Items": "#85a993",
         "Miscellaneous": "#f0b6ad",
         "Unclassified": "#0b5227"
     };
@@ -105,21 +105,15 @@ function createBarChart(container, data, tooltip, slideNumber) {
     const x1 = d3.scaleBand()
         .domain(data.map(d => d.country))
         .range([0, x0.bandwidth()])
-        .padding(-5);
+        .padding(-8);
 
     const y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => Math.max(0, d.exportsByCountry_exports))])
+        .domain([0, d3.max(data, d => d.exportsByCountry_exports)])
         .nice()
         .range([height, 0]);
 
-    const xAxis = svg.append("g")
-        .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x0))
-        .selectAll("text")
-        .attr("transform", "rotate(-45)")
-        .style("text-anchor", "end");
-
     svg.append("g")
+        .attr("class", "x-axis")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x0))
         .selectAll("text")
@@ -150,8 +144,6 @@ function createBarChart(container, data, tooltip, slideNumber) {
             tooltip.html(`Country: ${d.country}<br>Exports: ${d.exportsByCountry_exports}<br>Main Export: ${d.exportsByCountry_mainExport2019}<br>Group: ${d.group}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
-
-            showAnnotation(d);
         })
         .on("mouseout", function () {
             tooltip.transition()
@@ -164,100 +156,233 @@ function createBarChart(container, data, tooltip, slideNumber) {
         .attr("y", d => y(d.exportsByCountry_exports))
         .attr("height", d => height - y(d.exportsByCountry_exports));
 
+    highlightMaxExportCategory(data, groupColors, svg, width, height, margin);
     createLegend(svg, groupColors, width, slideNumber);
 
-    function showAnnotation(data) {
-        const bar = svg.selectAll(".bar").filter(d => d.country === data.country).node();
-        if (bar) {
-            const barPosition = bar.getBoundingClientRect();
-            const svgPosition = svg.node().getBoundingClientRect();
+    // Add a vertical dashed line for a specific region
+    var targetRegion = "Eastern Asia"; // Replace with the name of the region
+    var xPos = x0(targetRegion) + x0.bandwidth() / 2;
+    addVerticalLine(xPos, "red")
+    
+    targetRegion = "North America";
+    xPos = x0(targetRegion) + x0.bandwidth() / 2;
+    addVerticalLine(x0(targetRegion) + x0.bandwidth(), "blue")
+    addVerticalLine
 
-            const annotation = svg.append("g")
-                .attr("class", "annotation")
-                .attr("transform", `translate(${x1(data.country) + x0(data.region) + x1.bandwidth() / 2}, ${y(data.exportsByCountry_exports)})`);
+    function addVerticalLine(xPos, color) {
+        // add Eastern Asia line
+        svg.append("line")
+            .attr("x1", xPos)
+            .attr("y1", 150)
+            .attr("x2", xPos)
+            .attr("y2", height)
+            .attr("stroke", color)
+            .attr("stroke-width", 2)
+            .attr("stroke-dasharray", "5,5"); // Creates a dashed line
+    }
+}
+// function createBarChart(container, data, tooltip, slideNumber) {
+//     const margin = { top: 10, right: 10, bottom: 80, left: 60 };
+//     const width = container.node().clientWidth - margin.left - margin.right;
+//     const height = container.node().clientHeight - margin.top - margin.bottom;
 
-            // annotation.append("line")
-            //     .attr("x1", 0)
-            //     .attr("y1", 0)
-            //     .attr("x2", 0)
-            //     .attr("y2", -20)
-            //     .attr("stroke", "black")
-            //     .attr("stroke-width", 1);
+//     const svg = container.append("svg")
+//         .attr("width", width + margin.left + margin.right)
+//         .attr("height", height + margin.top + margin.bottom)
+//         .append("g")
+//         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-            // annotation.append("text")
-            //     .attr("x", 5)
-            //     .attr("y", -25)
-            //     .attr("font-size", "10px")
-            //     .attr("fill", "black")
-            //     .text(`${data.country}: ${data.exportsByCountry_exports}`);
+//     const groupColors = {
+//         "Energy": "#f7c435",
+//         "Minerals and Metals": "#dc8864",
+//         "Crops and Livestock": "#818b2e",
+//         "Manufactured": "#ba4848",
+//         "Food and Beverages": "#c75a1b",
+//         "Luxury Items": "#85a993",
+//         "Miscellaneous": "#f0b6ad",
+//         "Unclassified": "#0b5227"
+//     };
+
+//     const regionGroups = d3.group(data, d => d.region);
+//     const regions = Array.from(regionGroups.keys());
+
+//     const x0 = d3.scaleBand()
+//         .domain(regions)
+//         .range([0, width])
+//         .padding(0.1);
+
+//     const x1 = d3.scaleBand()
+//         .domain(data.map(d => d.country))
+//         .range([0, x0.bandwidth()])
+//         .padding(-5);
+
+//     const y = d3.scaleLinear()
+//         .domain([0, d3.max(data, d => Math.max(0, d.exportsByCountry_exports))])
+//         .nice()
+//         .range([height, 0]);
+
+//     svg.append("g")
+//         .attr("transform", `translate(0,${height})`)
+//         .call(d3.axisBottom(x0))
+//         .selectAll("text")
+//         .attr("transform", "rotate(-45)")
+//         .style("text-anchor", "end");
+
+//     svg.append("g")
+//         .call(d3.axisLeft(y));
+
+//         const bars = svg.selectAll(".region-group")
+//             .data(regions)
+//             .enter().append("g")
+//             .attr("class", "region-group")
+//             .attr("transform", d => `translate(${x0(d)},0)`)
+//             .selectAll(".bar")
+//             .data(d => regionGroups.get(d))
+//             .enter().append("rect")
+//             .attr("class", "bar")
+//             .attr("x", d => x1(d.country))
+//             .attr("y", height)
+//             .attr("width", x1.bandwidth())
+//             .attr("height", 0)
+//             .attr("fill", d => groupColors[d.group])
+//             .on("mouseover", function (event, d) {
+//                 tooltip.transition()
+//                     .duration(200)
+//                     .style("opacity", 0.9);
+//                 tooltip.html(`Country: ${d.country}<br>Exports: ${d.exportsByCountry_exports}<br>Main Export: ${d.exportsByCountry_mainExport2019}<br>Group: ${d.group}`)
+//                     .style("left", (event.pageX + 5) + "px")
+//                     .style("top", (event.pageY - 28) + "px");
+//             })
+//             .on("mouseout", function () {
+//                 tooltip.transition()
+//                     .duration(500)
+//                     .style("opacity", 0);
+//             });
+
+//     bars.transition()
+//         .duration(750)
+//         .attr("y", d => y(d.exportsByCountry_exports))
+//         .attr("height", d => height - y(d.exportsByCountry_exports));
+
+//     highlightMaxExportCategory(data, groupColors, svg, width, height, margin);
+//     createLegend(svg, groupColors, width, slideNumber);
+
+//     // Add a vertical dashed line for a specific region
+//     var targetRegion = "Eastern Asia"; // Replace with the name of the region
+//     var xPos = x0(targetRegion) + x0.bandwidth() / 2;
+//     addVerticalLine(xPos, "red")
+    
+//     targetRegion = "North America";
+//     xPos = x0(targetRegion) + x0.bandwidth() / 2;
+//     addVerticalLine(x0(targetRegion) + x0.bandwidth(), "blue")
+//     addVerticalLine
+
+//     function addVerticalLine(xPos, color) {
+//         // add Eastern Asia line
+//         svg.append("line")
+//             .attr("x1", xPos)
+//             .attr("y1", 150)
+//             .attr("x2", xPos)
+//             .attr("y2", height)
+//             .attr("stroke", color)
+//             .attr("stroke-width", 2)
+//             .attr("stroke-dasharray", "5,5"); // Creates a dashed line
+//     }
+//     //data.forEach(d => showAnnotation(d));
+// }
+    function wrapText(text, width) {
+        const words = text.split(/\s+/);
+        const lines = [];
+        let line = '';
+    
+        words.forEach(word => {
+            const testLine = line + (line ? ' ' : '') + word;
+            const testWidth = getTextWidth(testLine);
+    
+            if (testWidth > width) {
+                lines.push(line);
+                line = word;
+            } else {
+                line = testLine;
+            }
+        });
+    
+        lines.push(line);
+    
+        return lines;
+    }
+    
+    function getTextWidth(text) {
+        // Use a temporary SVG text element to measure text width
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        textElement.textContent = text;
+        svg.appendChild(textElement);
+        document.body.appendChild(svg);
+    
+        const width = textElement.getBBox().width;
+        document.body.removeChild(svg);
+        
+        return width;
+    }
+
+    function highlightMaxExportCategory(data, groupColors, svg, width, height, margin) {
+        
+        // Find max export category within current slide
+        const maxCategory = d3.max(data, d => d.exportsByCountry_exports);
+        const maxCategoryData = data.find(d => d.exportsByCountry_exports === maxCategory);
+        var text_str = ``
+        console.log(maxCategoryData.country)
+
+        if (maxCategoryData.country == "Poland") { // slide 1
+            text_str = `Notice the red background to match manufactured goods, the highest export commodity in the lower half of the top 
+            .0001 - .0001% of export goods in 2018`
+        }
+        if (maxCategoryData.country == "Zimbabwe") { // slide 2
+            text_str = `This tier of commodities is the only group in which luxury items are the top export commodity group` 
+        }
+
+        const wrappedText = wrapText(text_str, 350);
+
+        if (maxCategoryData) {
+            // highlight chart background for curr slide
+            svg.append("rect")
+                .attr("x", 0)
+                .attr("y", -10)
+                .attr("width", width)
+                .attr("height", height + 10)
+                .attr("fill", groupColors[maxCategoryData.group])
+                .attr("opacity", 0.3)
+                .lower(); // Move the rectangle to the back
+    
+            // annotation for max export category
+            svg.append("text")
+            .attr("x", 500)
+            .attr("y", -margin.top / 2 + 100)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10px")
+            .attr("fill", "black")
+            .selectAll("tspan")
+            .data(wrappedText)
+            .enter()
+            .append("tspan")
+            .attr("x", width / 2)
+            .attr("dy", (d, i) => i === 0 ? 0 : 14) // Line height (adjust as needed)
+            .text(d => d);
+    
+            // Highlight the region
+           // circleRegion(x0(maxCategoryData.region), width, height, margin);
         }
     }
 
-    data.forEach(d => showAnnotation(d));
 
-    if (slideNumber === 5) { 
-        circleRegion(x0("Eastern Asia"), x0.bandwidth(), height, margin)
-    }
-    function circleRegion(pos, width, height, margin) {
-        svg.append("circle")
-            .attr("cx", pos + width / 2 - 10)
-            .attr("cy", height + margin.bottom / 2)
-            .attr("r", 30) 
-            .attr("stroke", "red")
-            .attr("stroke-width", 2)
-            .attr("fill", "none");
+    // if (slideNumber === 5) { 
+    //     circleRegion(x0("Eastern Asia"), x0.bandwidth(), height, margin)
+    // }
 
-        // Add the arrow marker
-        svg.append("defs").append("marker")
-            .attr("id", "arrowhead")
-            .attr("viewBox", "-0 -5 10 10")
-            .attr("refX", 5)
-            .attr("refY", 0)
-            .attr("orient", "auto")
-            .attr("markerWidth", 6)
-            .attr("markerHeight", 6)
-            .attr("xoverflow", "visible")
-            .append("svg:path")
-            .attr("d", "M 0,-5 L 10,0 L 0,5")
-            .attr("fill", "red")
-            .style("stroke", "none");
-
-            // Coordinates for the arrow and note
-            const circleX = pos + width / 2;
-            const circleY = height + margin.bottom / 2;
-            const arrowX1 = circleX - 50;  // Starting X position (left of the circle)
-            const arrowY1 = circleY - 50;  // Starting Y position
-            const noteX = arrowX1 - 5;     // Note position (adjust as needed)
-            const noteY = arrowY1 - 5;     // Note position (adjust as needed)
-            const angle = Math.PI / 4;
-            
-
-            // Add the arrow line
-            svg.append("line")
-            .attr("x1", arrowX1)
-            .attr("y1", arrowY1)
-            .attr("x2", circleX)
-            .attr("y2", circleY)
-            .attr("stroke", "red")
-            .attr("stroke-width", 2)
-            .attr("marker-end", "url(#arrowhead)");
-
-                // Calculate the edge of the circle based on the angle
-        // const angle = Math.PI / 4; // Angle from the center to the edge (45 degrees, adjust as needed)
-        // const arrowX1 = circleX - (radius + 20) * Math.cos(angle); // Adjust distance from circle edge
-        // const arrowY1 = circleY - (radius + 20) * Math.sin(angle); // Adjust distance from circle edge
-
-            // Add the note text
-            svg.append("text")
-                .attr("x", noteX)
-                .attr("y", noteY)
-                .attr("fill", "red")
-                .attr("font-size", "12px")
-                .text("Eastern Asia region");
-    }
-}
-
-
+    // if (slideNumber == 3) {
+    //     circleRegion(x0("Southeast Asia"), x0.bandwidth(), height, margin)
+    // }
 
 function createLegend(svg, groupColors, width, slideNumber) {
     const legend = svg.append("g")
