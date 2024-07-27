@@ -14,7 +14,7 @@ d3.json("data/updated-exports-by-country-2024.json").then(data => {
         const slide = slides[index];
         const container = d3.select("#slide-container");
 
-        container.html("");  // Clear previous content
+        container.html("");  // clear previous content
         updateSlideTitle(slide, index+1);
         createBarChart(container, slide, tooltip, index+1);
     }
@@ -26,7 +26,7 @@ d3.json("data/updated-exports-by-country-2024.json").then(data => {
             showSlide(currentSlide);
             console.log(currentSlide)
         } else {
-            currentSlide--;
+            currentSlide = 0;
             const container = d3.select("#slide-container");
             container.html("");
             updateSlideTitle(slides[1], 1);
@@ -43,17 +43,17 @@ d3.json("data/updated-exports-by-country-2024.json").then(data => {
         }
     });
 
-    // Show the first slide
+    // show first slide
     updateSlideTitle(slides[1], 1);
     const container = d3.select("#slide-container");
     createBarChart(container, slides[0], tooltip);
 });
 
 function createSlides(data) {
-    // Sort data by percGlobalExports2018
+    // sort data by percGlobalExports2019
     data.sort((a, b) => a.exportsByCountry_percGlobalExports2018 - b.exportsByCountry_percGlobalExports2018);
 
-    // Divide data into 5 equal groups
+    // divide data into 5 equal groups
     const slides = [];
     const groupSize = Math.ceil(data.length / 5);
     for (let i = 0; i < 5; i++) {
@@ -64,16 +64,14 @@ function createSlides(data) {
 }
 
 function updateSlideTitle(slideData, slideNumber) {
-    // Calculate the min and max percGlobalExports2018 for the current slide
     const minPerc = d3.min(slideData, d => d.exportsByCountry_percGlobalExports2018);
     const maxPerc = d3.max(slideData, d => d.exportsByCountry_percGlobalExports2018);
 
-    // Update the slide title with the range
-    d3.select("#slide-title").text(`Slide ${slideNumber}: Global Exports ${minPerc.toFixed(4)} - ${maxPerc.toFixed(4)}%`);
+    d3.select("#slide-title").text(`Slide ${slideNumber}: Global Exports ${(minPerc * 100).toFixed(2)} - ${(maxPerc * 100).toFixed(2)}%`);
 }
 
 function createBarChart(container, data, tooltip, slideNumber) {
-    const margin = { top: 10, right: 10, bottom: 80, left: 60 };
+    const margin = { top: 10, right: 0, bottom: 100, left: 75 };
     const width = container.node().clientWidth - margin.left - margin.right;
     const height = container.node().clientHeight - margin.top - margin.bottom;
 
@@ -94,6 +92,31 @@ function createBarChart(container, data, tooltip, slideNumber) {
         "Unclassified": "#0b5227"
     };
 
+    const regionColors = {
+        "Australia and New Zealand": "#ef09c5",
+        "Baltic Countires": "#ea3891",
+        "British Isles": "#37579e",
+        "Caribbean": "#b78916", 
+        "Central Africa": "#5ef995",
+        "Central America": "#44bec9",
+        "Eastern Europe": "#11f437",
+        "Eastern Asia": "#b53322",
+        "Eastern Africa": "#dd835f",
+        "Melanesia": "#d82d0a",
+        "Melanesia": "#ba14e0",
+        "Micronesia": "#ea67d9",
+        "North America": "#32b5b2", 
+        "Middle East": "#5ebbf9",
+        "Nordic Countries": "#9f30db",
+        "South America": "#e2521d",
+        "Southeast Asia": "#094999",
+        "Southern Africa": "#d32e4f",
+        "Southern and Central Asia": "#dc8864",
+        "Southern Europe": "#2be560",
+        "Western Africa": "#f98416",
+        "Western Europe": "#b78837",
+    };
+
     const regionGroups = d3.group(data, d => d.region);
     const regions = Array.from(regionGroups.keys());
 
@@ -111,17 +134,40 @@ function createBarChart(container, data, tooltip, slideNumber) {
         .domain([0, d3.max(data, d => d.exportsByCountry_exports)])
         .nice()
         .range([height, 0]);
-
-    svg.append("g")
-        .attr("class", "x-axis")
+    
+    const xAxis = svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x0))
         .selectAll("text")
         .attr("transform", "rotate(-45)")
-        .style("text-anchor", "end");
+        .style("text-anchor", "end")
+        .attr("fill", d => regionColors[d] || "black"); // region-specific colors
+
+        svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x0))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end")
+        .attr("fill", d => regionColors[d] || "black");
 
     svg.append("g")
         .call(d3.axisLeft(y));
+
+    // Add x-axis label
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .attr("x", width / 2)
+    .attr("y", height + margin.bottom - 10)
+    .text("Region");
+
+    // Add y-axis label
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left + 15)
+        .text("Exports (USD)");
 
     const bars = svg.selectAll(".region-group")
         .data(regions)
@@ -151,6 +197,7 @@ function createBarChart(container, data, tooltip, slideNumber) {
                 .style("opacity", 0);
         });
 
+
     bars.transition()
         .duration(750)
         .attr("y", d => y(d.exportsByCountry_exports))
@@ -159,137 +206,41 @@ function createBarChart(container, data, tooltip, slideNumber) {
     highlightMaxExportCategory(data, groupColors, svg, width, height, margin);
     createLegend(svg, groupColors, width, slideNumber);
 
-    // Add a vertical dashed line for a specific region
-    var targetRegion = "Eastern Asia"; // Replace with the name of the region
-    var xPos = x0(targetRegion) + x0.bandwidth() / 2;
-    addVerticalLine(xPos, "red")
-    
-    targetRegion = "North America";
-    xPos = x0(targetRegion) + x0.bandwidth() / 2;
-    addVerticalLine(x0(targetRegion) + x0.bandwidth(), "blue")
-    addVerticalLine
+    var slide = slides[currentSlide];
 
-    function addVerticalLine(xPos, color) {
-        // add Eastern Asia line
+    addVerticalLine("Eastern Asia", slide)
+    addVerticalLine("North America", slide)
+    addVerticalLine("Southeast Asia", slide)
+    
+    function addVerticalLine(targetRegion, slide) {
+        var regionColor = regionColors[targetRegion]
+        var xPos = x0(targetRegion) + x0.bandwidth() / 2;
+        var maxCountryInRegion = highlightMaxExportCountryForRegion(data, targetRegion, groupColors, svg, width, height, margin)
+        console.log(maxCountryInRegion)
+        var slide = slides[currentSlide]
+
+        var maxCountryData = slide.find(d => d.country === maxCountryInRegion);
+        var flagPath = `${maxCountryData.flag}`
+        
+        // top country lin
         svg.append("line")
             .attr("x1", xPos)
             .attr("y1", 150)
             .attr("x2", xPos)
             .attr("y2", height)
-            .attr("stroke", color)
+            .attr("stroke", regionColor)
             .attr("stroke-width", 2)
-            .attr("stroke-dasharray", "5,5"); // Creates a dashed line
+            .attr("stroke-dasharray", "5,5");
+        
+        // flag
+        svg.append("image")
+            .attr("xlink:href", `${flagPath}`)
+            .attr("x", xPos - 15)
+            .attr("y", 130) 
+            .attr("width", 25) 
+            .attr("height", 15);
     }
 }
-// function createBarChart(container, data, tooltip, slideNumber) {
-//     const margin = { top: 10, right: 10, bottom: 80, left: 60 };
-//     const width = container.node().clientWidth - margin.left - margin.right;
-//     const height = container.node().clientHeight - margin.top - margin.bottom;
-
-//     const svg = container.append("svg")
-//         .attr("width", width + margin.left + margin.right)
-//         .attr("height", height + margin.top + margin.bottom)
-//         .append("g")
-//         .attr("transform", `translate(${margin.left},${margin.top})`);
-
-//     const groupColors = {
-//         "Energy": "#f7c435",
-//         "Minerals and Metals": "#dc8864",
-//         "Crops and Livestock": "#818b2e",
-//         "Manufactured": "#ba4848",
-//         "Food and Beverages": "#c75a1b",
-//         "Luxury Items": "#85a993",
-//         "Miscellaneous": "#f0b6ad",
-//         "Unclassified": "#0b5227"
-//     };
-
-//     const regionGroups = d3.group(data, d => d.region);
-//     const regions = Array.from(regionGroups.keys());
-
-//     const x0 = d3.scaleBand()
-//         .domain(regions)
-//         .range([0, width])
-//         .padding(0.1);
-
-//     const x1 = d3.scaleBand()
-//         .domain(data.map(d => d.country))
-//         .range([0, x0.bandwidth()])
-//         .padding(-5);
-
-//     const y = d3.scaleLinear()
-//         .domain([0, d3.max(data, d => Math.max(0, d.exportsByCountry_exports))])
-//         .nice()
-//         .range([height, 0]);
-
-//     svg.append("g")
-//         .attr("transform", `translate(0,${height})`)
-//         .call(d3.axisBottom(x0))
-//         .selectAll("text")
-//         .attr("transform", "rotate(-45)")
-//         .style("text-anchor", "end");
-
-//     svg.append("g")
-//         .call(d3.axisLeft(y));
-
-//         const bars = svg.selectAll(".region-group")
-//             .data(regions)
-//             .enter().append("g")
-//             .attr("class", "region-group")
-//             .attr("transform", d => `translate(${x0(d)},0)`)
-//             .selectAll(".bar")
-//             .data(d => regionGroups.get(d))
-//             .enter().append("rect")
-//             .attr("class", "bar")
-//             .attr("x", d => x1(d.country))
-//             .attr("y", height)
-//             .attr("width", x1.bandwidth())
-//             .attr("height", 0)
-//             .attr("fill", d => groupColors[d.group])
-//             .on("mouseover", function (event, d) {
-//                 tooltip.transition()
-//                     .duration(200)
-//                     .style("opacity", 0.9);
-//                 tooltip.html(`Country: ${d.country}<br>Exports: ${d.exportsByCountry_exports}<br>Main Export: ${d.exportsByCountry_mainExport2019}<br>Group: ${d.group}`)
-//                     .style("left", (event.pageX + 5) + "px")
-//                     .style("top", (event.pageY - 28) + "px");
-//             })
-//             .on("mouseout", function () {
-//                 tooltip.transition()
-//                     .duration(500)
-//                     .style("opacity", 0);
-//             });
-
-//     bars.transition()
-//         .duration(750)
-//         .attr("y", d => y(d.exportsByCountry_exports))
-//         .attr("height", d => height - y(d.exportsByCountry_exports));
-
-//     highlightMaxExportCategory(data, groupColors, svg, width, height, margin);
-//     createLegend(svg, groupColors, width, slideNumber);
-
-//     // Add a vertical dashed line for a specific region
-//     var targetRegion = "Eastern Asia"; // Replace with the name of the region
-//     var xPos = x0(targetRegion) + x0.bandwidth() / 2;
-//     addVerticalLine(xPos, "red")
-    
-//     targetRegion = "North America";
-//     xPos = x0(targetRegion) + x0.bandwidth() / 2;
-//     addVerticalLine(x0(targetRegion) + x0.bandwidth(), "blue")
-//     addVerticalLine
-
-//     function addVerticalLine(xPos, color) {
-//         // add Eastern Asia line
-//         svg.append("line")
-//             .attr("x1", xPos)
-//             .attr("y1", 150)
-//             .attr("x2", xPos)
-//             .attr("y2", height)
-//             .attr("stroke", color)
-//             .attr("stroke-width", 2)
-//             .attr("stroke-dasharray", "5,5"); // Creates a dashed line
-//     }
-//     //data.forEach(d => showAnnotation(d));
-// }
     function wrapText(text, width) {
         const words = text.split(/\s+/);
         const lines = [];
@@ -313,7 +264,6 @@ function createBarChart(container, data, tooltip, slideNumber) {
     }
     
     function getTextWidth(text) {
-        // Use a temporary SVG text element to measure text width
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         textElement.textContent = text;
@@ -327,62 +277,92 @@ function createBarChart(container, data, tooltip, slideNumber) {
     }
 
     function highlightMaxExportCategory(data, groupColors, svg, width, height, margin) {
-        
-        // Find max export category within current slide
+ 
         const maxCategory = d3.max(data, d => d.exportsByCountry_exports);
         const maxCategoryData = data.find(d => d.exportsByCountry_exports === maxCategory);
-        var text_str = ``
-        console.log(maxCategoryData.country)
-
+    
+        let text_str = '';
+    
+        console.log("max Cat country", maxCategoryData.country);
+        var xpos;
+    
         if (maxCategoryData.country == "Poland") { // slide 1
-            text_str = `Notice the red background to match manufactured goods, the highest export commodity in the lower half of the top 
-            .0001 - .0001% of export goods in 2018`
+            text_str = "Notice the red background to match manufactured goods, the highest export commodity in the lower half of the top 0.01% of export goods in 2018";
+            xpos = 200
+            ypos = 80
         }
         if (maxCategoryData.country == "Zimbabwe") { // slide 2
-            text_str = `This tier of commodities is the only group in which luxury items are the top export commodity group` 
+            text_str = "This tier of commodities is the only group in which luxury items is the top export commodity group";
+            xpos = 40
+            ypos = 90
         }
-
-        const wrappedText = wrapText(text_str, 350);
-
-        if (maxCategoryData) {
-            // highlight chart background for curr slide
-            svg.append("rect")
-                .attr("x", 0)
-                .attr("y", -10)
-                .attr("width", width)
-                .attr("height", height + 10)
-                .attr("fill", groupColors[maxCategoryData.group])
-                .attr("opacity", 0.3)
-                .lower(); // Move the rectangle to the back
-    
-            // annotation for max export category
-            svg.append("text")
-            .attr("x", 500)
-            .attr("y", -margin.top / 2 + 100)
-            .attr("text-anchor", "middle")
-            .attr("font-size", "10px")
-            .attr("fill", "black")
-            .selectAll("tspan")
-            .data(wrappedText)
-            .enter()
-            .append("tspan")
-            .attr("x", width / 2)
-            .attr("dy", (d, i) => i === 0 ? 0 : 14) // Line height (adjust as needed)
-            .text(d => d);
-    
-            // Highlight the region
-           // circleRegion(x0(maxCategoryData.region), width, height, margin);
+        if (maxCategoryData.country == "Cambodia") { // slide 3
+            text_str = "Top 3 export regions: East Asia, North America, and Southeast Asia, dominate this percentage group in energy. ";
+            xpos = 0
+            ypos = 70
         }
+        if (maxCategoryData.country == "Romania") { // slide 4
+            text_str = "Tier 2 export countries dominate this perctage group in manufacturing and energy";
+            xpos = 100
+            ypos = 80
+        }
+        if (maxCategoryData.country == "China") { // slide 5
+            text_str = "The U.S. and China - the top export countries - take up up to 10.78% of exports in energy and manufacturing, respectively";
+            xpos = 130
+            ypos = 80
+        }
+    
+        console.log(currentSlide);
+    
+        // highlight chart background for curr slide
+        svg.append("rect")
+            .attr("x", 0)
+            .attr("y", -10)
+            .attr("width", width)
+            .attr("height", height + 10)
+            .attr("fill", groupColors[maxCategoryData.group])
+            .attr("opacity", 0.5)
+            .lower(); // Move the rectangle to the back
+    
+// for overlay insights box
+const foreignObject = svg.append("foreignObject")
+.attr("x", xpos)  // Adjust position as needed
+.attr("y", ypos)  // Adjust position as needed
+.attr("width", width - 100)
+.attr("height", height - 100);
+
+const div = foreignObject.append("xhtml:div")
+.attr("class", "overlay-box");
+
+div.html(`
+<details>
+    <summary class="collapsible-button">More info</summary>
+    <p>${text_str}</p>
+</details>
+`);
+
+        div.html(`
+            <details>
+                <summary>Insights</summary>
+                <p>${text_str}</p>
+            </details>
+        `);
+        
     }
-
-
-    // if (slideNumber === 5) { 
-    //     circleRegion(x0("Eastern Asia"), x0.bandwidth(), height, margin)
-    // }
-
-    // if (slideNumber == 3) {
-    //     circleRegion(x0("Southeast Asia"), x0.bandwidth(), height, margin)
-    // }
+    function highlightMaxExportCountryForRegion(data, region, groupColors, svg, width, height, margin) {
+      
+        const regionData = data.filter(d => d.region === region);
+    
+        if (regionData.length === 0) {
+            console.log(`No data available for region: ${region}`);
+            return null;
+        }
+            const maxCountryData = regionData.reduce((max, d) => d.exportsByCountry_exports > max.exportsByCountry_exports ? d : max, regionData[0]);
+    
+        console.log(`Max export country for ${region}: ${maxCountryData.country}`);
+    
+        return maxCountryData.country;
+    }
 
 function createLegend(svg, groupColors, width, slideNumber) {
     const legend = svg.append("g")
@@ -405,16 +385,14 @@ function createLegend(svg, groupColors, width, slideNumber) {
     .attr("font-weight", "bold")
     .text("Legend");
 
-    // Calculate the number of items per row
+    // compute num items/row
     const itemsPerRow = Math.ceil(legendKeys.length / 2);
     const rowWidth = legendItemWidth + legendSpacing + 60; // Width of a row item
 
-    // Append legend items
     legendKeys.forEach((key, index) => {
         const row = Math.floor(index / itemsPerRow);
         const col = index % itemsPerRow;
 
-        // Append legend color box
         legend.append("rect")
             .attr("class", "legend-item")
             .attr("x", col * rowWidth)
@@ -424,7 +402,7 @@ function createLegend(svg, groupColors, width, slideNumber) {
             .style("fill", groupColors[key])
             .style("cursor", "pointer")
             .on("click", (event, d) => handleLegendItemClick(d, slideNumber));
-        // Append legend text
+        
         legend.append("text")
             .attr("x", col * rowWidth + legendItemWidth + legendSpacing - 7)
             .attr("y", row * (legendItemHeight + legendSpacing) + legendItemHeight / 2)
@@ -436,38 +414,33 @@ function createLegend(svg, groupColors, width, slideNumber) {
 function handleLegendClick(group) {
     const slide = slides[currentSlide];
 
-    console.log("hie")
-    // Find the country with the maximum exports for the clicked group
+    // find country with max eports for clicked group and show respective bar
     const maxExportCountry = slide
         .filter(d => d.group === group)
         .reduce((max, d) => d.exportsByCountry_exports > max.exportsByCountry_exports ? d : max, { exportsByCountry_exports: -Infinity });
 
-    // Zoom to the selected bar (you may need to adjust this part based on your actual chart layout)
     highlightBar(maxExportCountry);
 }
-
 
 function highlightBar(country) {
     const svg = d3.select("#slide-container svg");
 
-    // Select all bars, tweak opacity
+    // select all bars, tweak opacity
     svg.selectAll(".bar")
         .transition()
         .duration(750)
-        .style("opacity", d => d.country === country.country ? 1 : 0); // Make other bars not visible
+        .style("opacity", d => d.country === country.country ? 1 : 0); // clear other bars
 
-    // Highlight corresponding label
+    // highlight label
     svg.selectAll(".x-axis text")
         .transition()
         .duration(750)
         .style("fill", d => d === country.country ? "red" : "black")
         .style("font-weight", d => d === country.country ? "bold" : "normal");
 
-         // Add an annotation for the selected country
     const annotation = svg.selectAll(".annotation")
     .data([country]);
 
-    // Update existing annotation
     annotation.enter()
     
         .append("foreignObject")
@@ -487,9 +460,9 @@ function highlightBar(country) {
         `)
         .transition()
         .duration(750)
-        .style("opacity", 1); // Fade in
+        .style("opacity", 1); // fade in
 
-    // Remove previous annotations on slide change
+    // clear previous annotations upon deletion of slide
     svg.selectAll(".annotation").exit().remove();
 
     const bar = svg.selectAll(".bar").filter(d => d.country === country.country).node();
@@ -502,11 +475,9 @@ function highlightBar(country) {
     }
 }
 
-// Calculate legend box dimensions
 const legendBoxHeight = 2 * (legendItemHeight + legendSpacing) - legendSpacing + 2 * legendPadding;
 const legendBoxWidth = itemsPerRow * rowWidth - legendSpacing + 2 * legendPadding;
 
-// Append legend box
 legend.append("rect")
     .attr("x", -legendPadding)
     .attr("y", -legendPadding)
@@ -516,7 +487,6 @@ legend.append("rect")
     .style("stroke", "black")
     .style("stroke-width", "1px");
 
-    // Append legend items
     legend.selectAll("rect.legend-item")
         .data(legendKeys)
         .enter().append("rect")
@@ -539,7 +509,7 @@ legend.append("rect")
     
         function showImage(imagePath, tooltipPosition) {
             const imgContainer = d3.select("#slide-container");
-            imgContainer.selectAll("div.annotation-image-container").remove(); // Clear existing images
+            imgContainer.selectAll("div.annotation-image-container").remove(); // clear existing images
         
             if (tooltipPosition) {
                 const imgWrapper = imgContainer.append("div")
@@ -553,7 +523,7 @@ legend.append("rect")
                     .attr("class", "zoom-container")
                     .style("position", "relative")
                     .style("display", "inline-block")
-                    .style("width", "200px") // Initial width
+                    .style("width", "200px")
                     .style("height", "auto");
         
                 const img = zoomContainer.append("img")
@@ -561,14 +531,14 @@ legend.append("rect")
                     .attr("class", "annotation-image")
                     .style("display", "block")
                     .style("width", "100%")
-                    .style("height", "auto") // Maintain aspect ratio
+                    .style("height", "auto")
                     .on("load", function () {
                         d3.select(this).transition()
                             .duration(500)
                             .style("display", "block");
                     })
                     .on("error", function () {
-                        imgWrapper.remove(); // Remove the image container if not found
+                        imgWrapper.remove();
                         d3.select("#popup").style("display", "block");
                     });
         
@@ -596,7 +566,7 @@ legend.append("rect")
                         .style("transform", `scale(${newScale})`);
                 });
         
-                // Add close button
+                // add close button
                 zoomContainer.append("button")
                     .attr("class", "close-btn")
                     .text("Close")
@@ -604,12 +574,13 @@ legend.append("rect")
                     .style("top", "50x")
                     .style("right", "75px")
                     .on("click", function () {
-                        imgWrapper.remove(); // Remove the image container
-                        d3.selectAll(".bar").style("opacity", 1); // Reset bar opacity
+                        // remove previous state and reset
+                        imgWrapper.remove(); // remove image container
+                        d3.selectAll(".bar").style("opacity", 1);
                         d3.selectAll(".x-axis text")
                             .style("fill", "black")
-                            .style("font-weight", "normal"); // Reset label styles
-                        d3.selectAll(".annotation").remove(); // Remove annotations
+                            .style("font-weight", "normal");
+                        d3.selectAll(".annotation").remove(); 
                     });
             } else {
                 console.error("Tooltip position is undefined.");
@@ -623,18 +594,14 @@ legend.append("rect")
         const imagePath = `data/image_annotations/slide${slideNumber}/${group.toLowerCase().replace(/ /g, "_")}.png`;
         
         console.log(imagePath)
-        // Create an Image object to check if the file exists
         const img = new Image();
         img.src = imagePath;
     
         img.onload = function() {
-            // Image exists and is loaded, show it
-          //  showImage(imagePath);
             handleLegendClick(group);
         };
     
-        img.onerror = function() {
-            // Image doesn't exist, show a popup
+        img.onerror = function() { // image doesn't exist
             showPopup("No data on this commodity")
         };
     }
@@ -644,14 +611,9 @@ legend.append("rect")
         popup.style("display", "flex");
         popup.select("p").text(message);
         
-        // Add event listener to close the popup
+        // listen for close popup
         popup.select(".close-btn").on("click", () => {
             popup.style("display", "none");
         });
-
-        // Optionally, hide the popup after a delay
-        setTimeout(() => {
-            popup.style("display", "none");
-        }, 3000); // Hide after 3 seconds
     }
 }

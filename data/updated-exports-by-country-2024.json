@@ -15,7 +15,8 @@
         "exportsByCountry_percGlobalExports2018": 0.1078,
         "exportsByCountry_mainExport2019": "Broadcasting Equipment",
         "group": "Manufactured",
-        "region": "Eastern Asia"
+        "region": "Eastern Asia",
+        "flag": "data/image_annotations/flags/china_flag.png"
     },
     {
         "country": "United States",
@@ -24,7 +25,8 @@
         "exportsByCountry_percGlobalExports2018": 0.1026,
         "exportsByCountry_mainExport2019": "Refined Petroleum",
         "group": "Energy",
-        "region": "North America"
+        "region": "North America",
+        "flag": "data/image_annotations/flags/us_flag.png"
     },
     {
         "country": "Indonesia",
@@ -1194,7 +1196,8 @@
         "exportsByCountry_percGlobalExports2018": 0.0003,
         "exportsByCountry_mainExport2019": "Coal Briquettes",
         "group": "Energy",
-        "region": "Eastern Asia"
+        "region": "Eastern Asia",
+        "flag": "data/image_annotations/flags/mongolia_flag.png"
     },
     {
         "country": "Uruguay",
