@@ -1,7 +1,7 @@
 # Geopolitics enthusiast here - check out this interactive slideshow of insights in global exports! 
 ## Built using JavaScript, HTML5, CSS. Data acquired from OEC.
 
-Play around with it here: https://shalnisundram.github.io/js_narrative_vis/
+Play around with it here: [https://shalnisundram.github.io/js_narrative_vis/](https://shalnisundram.github.io/oec_exports_visualization/)
 
 Guide: 
 * Each slide represents traded goods in the top x percentage of all exports
